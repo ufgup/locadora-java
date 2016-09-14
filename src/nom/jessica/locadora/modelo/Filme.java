@@ -2,6 +2,8 @@ package nom.jessica.locadora.modelo;
 
 public class Filme {
 
+	private static int quantidadeFilmes = 0;
+
 	private Long codigo;
 	private String nome;
 	private String genero;
@@ -12,13 +14,19 @@ public class Filme {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
+		quantidadeFilmes++;
 	}
-
 	public Long getCodigo() {
 		return codigo;
 	}
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public String getGenero() {
 		return genero;
@@ -39,11 +47,13 @@ public class Filme {
 		this.autorPrincipal = autorPrincipal;
 	}
 
+	public static int getQuantidadeFilmes() {
+		return quantidadeFilmes;
+	}
+
 	public String toString() {
 		return "Filme [codigo=" + codigo + ", nome=" + nome + ", genero=" + genero + ", ano=" + ano
 				+ ", autorPrincipal=" + autorPrincipal + "]";
 	}
-
-
 
 }
