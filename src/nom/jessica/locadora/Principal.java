@@ -30,6 +30,8 @@ public class Principal {
 			codigoString = JOptionPane.showInputDialog(null, "Digite o codigo do filme");
 			codigo = Long.parseLong(codigoString);
 		}
+
+		JOptionPane.showMessageDialog(null, "Quantidade de filmes criados: " + Filme.getQuantidadeFilmes());
 	}
 
 }
